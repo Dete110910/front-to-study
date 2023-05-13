@@ -18,7 +18,7 @@ export class AppComponent {
     this.backEndInfo = {author: " ", status: "stopped", hostname: " ", date: " "};
     this.numberInfo = {author: " ", status: "stopped", hostname: " ", date: " "}
     let headers = new HttpHeaders().set('Content-Type', 'application/json');
-    this.http.get('http://192.168.0.27:30010/api/server', {headers: headers}).subscribe(data => {
+    this.http.get('http://192.168.0.27:30012/api/server', {headers: headers}).subscribe(data => {
       this.backEndInfo = data;
       console.log(data);
     }, error => {
