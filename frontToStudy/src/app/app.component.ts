@@ -19,14 +19,14 @@ export class AppComponent {
     this.numberInfo = {author: " ", status: "stopped", hostname: " ", date: " "}
     console.log("v5");
     let headers = new HttpHeaders().set('Content-Type', 'application/json');
-    this.http.get('http://192.168.0.27:30012/api/backEndInfo', {headers: headers}).subscribe(data => {
+    this.http.get('http://10.4.74.62:30012/api/backEndInfo', {headers: headers}).subscribe(data => {
       this.backEndInfo = data;
       console.log(data);
     }, error => {
       console.log("No se puedo hacer la petición al primer servidor");
     });
 
-    this.http.get('http://192.168.0.27:30013/api/number', {headers: headers}).subscribe(data => {
+    this.http.get('http://10.4.74.62:30013/api/number', {headers: headers}).subscribe(data => {
       console.log(data);
       this.numberInfo = data;
     }, error => {
