@@ -17,7 +17,7 @@ export class AppComponent {
   constructor(private http: HttpClient) {
     this.backEndInfo = {author: " ", status: "stopped", hostname: " ", date: " "};
     this.numberInfo = {author: " ", status: "stopped", hostname: " ", date: " "}
-    console.log("v12");
+    console.log("v14");
     let headers = new HttpHeaders().set('Content-Type', 'application/json');
     this.http.get('http://10.4.74.62:30012/api/backEndInfo', {headers: headers}).subscribe(data => {
       this.backEndInfo = data;
